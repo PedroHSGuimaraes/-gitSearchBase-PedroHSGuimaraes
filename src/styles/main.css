@@ -1,0 +1,43 @@
+.index,
+.error {
+  display: flex;
+  flex-direction: column;
+  min-width: 100dvw;
+  min-height: 100dvh;
+}
+.index__input{
+  color: var(--color-grey-7);
+}
+.error {
+  background-color: var(--color-grey-2);
+}
+
+.profile__main {
+  width: 80%;
+}
+
+.spinner--active{
+  margin-top: 2rem;
+  margin-left: 8rem;
+  height: 50px;
+  width: 50px;
+ border-top: 2px solid var(--color-alert);
+ border-radius: 50%;
+ animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .index,
+  .error {
+    flex-direction: row;
+  }
+}
